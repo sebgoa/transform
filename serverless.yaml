@@ -1,0 +1,26 @@
+service: knative-test
+description: "Deploying functions from GitLab using Knative"
+
+provider:
+  name: triggermesh
+  environment:
+    FOO: BAR
+
+functions:
+  nodejs:
+    handler: nodejs
+    runtime: https://gitlab.com/triggermesh/runtimes/raw/master/nodejs.yaml
+    description: "nodejs fragment"
+    buildargs:
+      - DIRECTORY=nodejs
+    environment:
+      FUNCTION: nodejs
+  
+  container:
+    handler: simple
+    description: "knative canonical sample"
+    runtime: https://gitlab.com/triggermesh/runtimes/raw/master/kaniko.yaml
+    buildargs:
+      - DIRECTORY=simple
+    environment:
+      SIMPLE_MSG: Hello
