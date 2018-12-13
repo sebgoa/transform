@@ -20,8 +20,9 @@ console.log("Hello from knative");
 
 var exports = module.exports = {};
 
-exports.hello = function() {
+exports.hello = function(name) {
 
-    return "Hello GitLab !";
+    str = "Hello" + name;
+    return str;
 
 };
