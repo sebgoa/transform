@@ -36,6 +36,3 @@ var exports = module.exports = function(name) {
     return str;
 
 };
-
-
-};
