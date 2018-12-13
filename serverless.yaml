@@ -15,6 +15,15 @@ functions:
       - DIRECTORY=nodejs
     environment:
       FUNCTION: nodejs
+
+  hello:
+    handler: hello
+    runtime: https://gitlab.com/triggermesh/runtimes/raw/master/nodejs.yaml
+    description: "nodejs hello"
+    buildargs:
+      - DIRECTORY=hello
+    environment:
+      FUNCTION: hello
   
   container:
     handler: simple
