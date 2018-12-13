@@ -23,7 +23,7 @@ var exports = module.exports = function(name) {
     if (typeof name == 'object') {
         // Riff's runtime gives you an object even if data is POSTed without Content-Type, but it's an odd object
         if (Object.keys(name).length === 1 && name[Object.keys(name)[0]] === "") {
-            name = name;
+            name = name[Object.keys(name)[0]];
         } else {
             name = JSON.stringify(name);
         }
