@@ -16,7 +16,12 @@
 
 "use strict"
 
-module.exports = {
-    console.log("Hello from knative");
+console.log("Hello from knative");
+
+var exports = module.exports = {};
+
+exports.hello = function() {
+
     return "Hello GitLab !";
+
 };
