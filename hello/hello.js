@@ -18,5 +18,5 @@
 
 module.exports => {
     console.log("Hello from knative");
-    return "Hello GitLab !"
+    return "Hello GitLab !";
 };
