@@ -15,6 +15,15 @@ functions:
       - DIRECTORY=nodejs
     environment:
       FUNCTION: nodejs
+      
+  faas:
+    handler: https://github.com/openfaas/faas
+    runtime: https://raw.githubusercontent.com/triggermesh/openfaas-runtime/master/nodejs/openfaas-nodejs-runtime.yaml
+    description: "nodejs fragment"
+    buildargs:
+      - DIRECTORY=sample-functions/BaseFunctions/node
+    environment:
+      FUNCTION: nodejs
 
   hello:
     handler: hello
