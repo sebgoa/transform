@@ -16,7 +16,7 @@
 
 "use strict"
 
-module.exports => {
+module.exports = {
     console.log("Hello from knative");
     return "Hello GitLab !";
 };
