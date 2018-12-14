@@ -16,14 +16,14 @@ functions:
     environment:
       FUNCTION: nodejs
       
-  hello:
-    handler: hello
+  echo:
+    handler: echo
     runtime: https://gitlab.com/triggermesh/runtimes/raw/master/nodejs.yaml
-    description: "nodejs hello"
+    description: "echo function in nodejs"
     buildargs:
-      - DIRECTORY=hello
+      - DIRECTORY=echo
     environment:
-      FUNCTION: hello
+      FUNCTION: echo
   
   container:
     handler: simple
