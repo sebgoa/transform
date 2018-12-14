@@ -32,6 +32,6 @@ var exports = module.exports = function(name) {
         name = 'error: Unexpected argument type ' + (typeof name);
     }
 
-    return str;
+    return name;
 
 };
