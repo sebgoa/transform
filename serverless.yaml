@@ -40,5 +40,5 @@ functions:
     runtime: https://raw.githubusercontent.com/triggermesh/aws-python-runtime/master/python-3.7/buildtemplate.yaml
     buildargs:
       - DIRECTORY=python
-      - BUILDARGS=handler.endpoint
+      - HANDLER=handler.endpoint
 
