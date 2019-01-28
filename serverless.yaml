@@ -41,4 +41,13 @@ functions:
     buildargs:
       - DIRECTORY=python
       - HANDLER=handler.endpoint
+      
+  hello:
+    handler: hello
+    runtime: https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/python-3.7/buildtemplate.yaml
+    description: "python Hello function with KLR template"
+    buildargs:
+     - DIRECTORY=python
+     - HANDLER=hello.endpoint
+
 
