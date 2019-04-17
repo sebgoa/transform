@@ -6,7 +6,7 @@ import datetime
 def endpoint(event, context):
     current_time = datetime.datetime.now().time()
     body = {
-        "message": "Hello, time is " + str(current_time)
+        "message": "Hello Somik, time is " + str(current_time)
     }
 
     response = {
