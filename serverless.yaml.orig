@@ -1,0 +1,44 @@
+service: knative-test
+description: "Deploying functions from GitLab using Knative"
+
+provider:
+  name: triggermesh
+  environment:
+    FOO: BAR
+
+functions:
+  echo:
+    handler: echo
+    runtime: https://gitlab.com/triggermesh/runtimes/raw/master/nodejs.yaml
+    description: "echo function in nodejs"
+    buildargs:
+      - DIRECTORY=echo
+    environment:
+      FUNCTION: echo
+  
+  container:
+    handler: simple
+    description: "knative canonical sample"
+    runtime: https://gitlab.com/triggermesh/runtimes/raw/master/kaniko.yaml
+    buildargs:
+      - DIRECTORY=simple
+    environment:
+      SIMPLE_MSG: Hello
+
+  python:
+    handler: python
+    description: "python Lambda compatible"
+    runtime: https://raw.githubusercontent.com/triggermesh/aws-python-runtime/master/python-3.7/buildtemplate.yaml
+    buildargs:
+      - DIRECTORY=python
+      - HANDLER=handler.endpoint
+      
+  hello:
+    handler: hello
+    runtime: https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/python-3.7/buildtemplate.yaml
+    description: "python Hello function with KLR template"
+    buildargs:
+     - DIRECTORY=hello
+     - HANDLER=hello.endpoint
+
+
