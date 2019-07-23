@@ -8,7 +8,7 @@ provider:
 
 functions:
   python:
-    handler: python
+    source: python/handler.py
     description: "python Lambda compatible"
     runtime: https://raw.githubusercontent.com/triggermesh/runtime-build-tasks/master/aws-lambda/python37-runtime.yaml 
     buildargs:
