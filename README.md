@@ -1,5 +1,5 @@
-# examples
+# Function CI/CD on TriggerMesh
 
-Examples of using Knative and deploying functions from GitLab
+Clone this repository and register it in the Functions section of the TriggerMesh cloud.
 
-second
+Any push will trigger a function rebuild and re-deployment.
