@@ -1,4 +1,4 @@
-service: knative-test
+service: knative-demo
 description: "Deploying functions from GitLab using Knative"
 
 provider:
