@@ -10,7 +10,7 @@ functions:
   python:
     source: python/handler.py
     description: "python Lambda compatible"
-    runtime: https://raw.githubusercontent.com/triggermesh/runtime-build-tasks/master/aws-lambda/python37-runtime.yaml 
+    runtime: https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/python-3.7/runtime.yaml
     buildargs:
       - DIRECTORY=python
       - HANDLER=handler.endpoint
