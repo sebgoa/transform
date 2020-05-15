@@ -4,9 +4,10 @@ import datetime
 
 
 def endpoint(event, context):
-    current_time = datetime.datetime.now().time()
+    #current_time = datetime.datetime.now().time()
+    print(json.loads(event))
     body = {
-        "message": "Hello, demo " + str(current_time)
+        "message": "Hello from repo " + event['body']['repository']['full_name']
     }
 
     response = json.dumps(body)
