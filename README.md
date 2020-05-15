@@ -4,4 +4,3 @@ Clone this repository and register it in the Functions section of the TriggerMes
 
 Any push will trigger a function rebuild and re-deployment.
 
-yoyoyo
