@@ -5,9 +5,9 @@ import datetime
 
 def endpoint(event, context):
     #current_time = datetime.datetime.now().time()
-    print(event['body'])
+    print(event['data'])
     body = {
-        "message": "Hello from repo " + event['body']['repository']['full_name']
+        "message": "Hello from repo " + event['data']['repository']['full_name']
     }
 
     response = json.dumps(body)
