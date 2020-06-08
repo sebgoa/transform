@@ -8,4 +8,4 @@ spec:
   template:
     spec:
       containers:
-      - image: gcr.io/triggermesh/googletranslate:v0.0.2
+      - image: gcr.io/triggermesh/googletranslate:v0.0.6

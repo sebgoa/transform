@@ -27,9 +27,10 @@ def trans():
     body = {}
     # FOR SLACK SOURCE
     result = translator.translate(ce['text'], dest='es')
+    print(result.text)
     body = {
-        "channel": channel,
-        "text": ce['user_id'] + "@" + ce['subject'] + " says: " + result.text
+        "channel": "tmspanish",
+        "text": ce['user_id'] + " says: " + result.text
     }
 
     print(body)
