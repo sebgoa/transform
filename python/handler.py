@@ -3,8 +3,8 @@ import json
 #import requests
 
 def endpoint(event, context):
-    #current_time = datetime.datetime.now().time()
-    print(event.keys())
+    current_time = datetime.datetime.now().time()
+    #print(event.keys())
     
     # respond with a cloudevent
     body = {}
