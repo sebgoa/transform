@@ -15,10 +15,14 @@ def endpoint(event, context):
 
     #headers = {'Content-Type': 'application/cloudevents+json'}
     
-    body['data'] = {
-        "message": "A commit was made at " + event['repository']['full_name']
-    }
+    #body['data'] = {
+    #    "message": "A commit was made at " + event['repository']['full_name']
+    #}
 
+        body['data'] = {
+        "message": "time is " + current_time
+    }
+   
     response = json.dumps(body)
 
     return response
