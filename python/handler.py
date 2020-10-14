@@ -19,7 +19,7 @@ def endpoint(event, context):
     #    "message": "A commit was made at " + event['repository']['full_name']
     #}
 
-        body['data'] = {
+    body['data'] = {
         "message": "time is " + current_time
     }
    
