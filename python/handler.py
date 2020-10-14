@@ -1,6 +1,6 @@
 
 import json
-import requests
+#import requests
 
 def endpoint(event, context):
     #current_time = datetime.datetime.now().time()
