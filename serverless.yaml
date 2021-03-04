@@ -10,6 +10,6 @@ functions:
   python:
     source: python/handler.py
     description: "python Lambda compatible"
-    runtime: https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/python-3.7/runtime.yaml
+    runtime: https://raw.githubusercontent.com/triggermesh/knative-lambda-runtime/master/python37/runtime.yaml
     buildargs:
       - HANDLER=handler.endpoint
